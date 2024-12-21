@@ -25,48 +25,56 @@
 \setlength{\belowcaptionskip}{10pt plus 3pt minus 2pt}
 
 \usepackage{stackengine}
-\usepackage{amssymb}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \newcommand{\arrow}{\tikz[thick, -{Triangle[scale=0.8]}]{\draw (0,2ex) -- (0,0) -- (2ex,0)}}
+
+\newcommand{\mahjongexplain}[2]{\stackengine{\Sstackgap}{#1}{\hskip9pt\relax \arrow #2}{U}{l}{\quietstack}{\useanchorwidth}{\stacktype}}
+\newcommand{\explainmahjong}[1]{\raisebox{-2pt}{\mahjong[3ex]{#1}}}
+\newcommand{\paiindex}[1]{\parbox{2em}{\linespread{1.0}\selectfont\centering\textbf{牌#1}}}
+\newcommand{\te}[4]{
+    \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#4} \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#3}}}{宝牌}}
+\newcommand{\tekiri}[5]{
+    \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#5}
+    \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#3}}}{宝牌}
+    \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#4}}}{切}
+}
+\newcommand{\tekiririichi}[5]{
+    \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#5}
+    \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#3}}}{宝牌}
+    \quad \stackon{\stackunder{\raisebox{-10pt}{\mahjong[6ex]{#4}}}{切}}{\scriptsize{立直}}
+}
 \newcommand{\pai}[3]{\textbf{牌#2}
-\stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{#1/te#2.png}}}
+\stackengine{\Sstackgap}
+            {\raisebox{-10pt}{\includegraphics[height=6ex]{#1/te#2.png}}}
             {\hskip9pt\relax \arrow #3}
+            {U}
+            {l}
+            {\quietstack}
+            {\useanchorwidth}
+            {\stacktype}
 \quad
 \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{#1/te#2dora.png}}}{宝牌}}
 
-\def\stackalignment{l}
-%\usepackage{tabularx}
+%\def\stackalignment{l}
 
 
-% header and footer
-%
+\usepackage{mahjong}
 
-
-
-% \newcommand{\ms}{\mathscr}
-% \newcommand{\mc}{\mathcal}
-% \newcommand{\mf}{\mathfrak}
-% \newcommand{\ov}{\overline}
-% \newcommand{\N}{\mathbb{N}}
-% \newcommand{\R}{\mathbb{R}}
-% \newcommand{\Z}{\mathbb{Z}}
-% \newcommand{\Q}{\mathbb{Q}}
-% \newcommand{\F}{\mathbb{F}}
-% \newcommand{\C}{\mathbb{C}}
-% \newcommand{\epi}{\varepsilon}
 
 \begin{document}
 \maketitle
 \tableofcontents
+
 \part{做牌的诀窍}
+
 \input{part1/lecture1/lecture1.tex}
 \input{part1/lecture2/lecture2.tex}
+\input{part1/lecture3/lecture3.tex}
 
 
 
 
-    
 
-    
+
 \end{document}
