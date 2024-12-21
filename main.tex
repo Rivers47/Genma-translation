@@ -1,0 +1,72 @@
+\documentclass{ctexbook}
+\title{现代麻将技术论}
+\author{ネマタ}
+\usepackage{ctex}
+\setCJKmainfont{SarasaGothicSC-Regular.ttf}[BoldFont=SarasaGothicSC-Bold.ttf, ItalicFont=SarasaGothicSC-Italic.ttf] 
+\setCJKfamilyfont{zhsong}{SarasaGothicSC-Regular.ttf}[BoldFont=SarasaGothicSC-Bold.ttf, ItalicFont=SarasaGothicSC-Italic.ttf] 
+
+\ctexset{punct=quanjiao}
+
+\usepackage{hyperref}
+\newcommand{\fullref}[1]{\hyperref[#1]{\ref*{#1}\ \nameref*{#1}}}
+\usepackage{geometry}       
+\usepackage{framed}        
+\geometry{letterpaper, margin=1in}                   
+%\usepackage{color}
+%\setlength{\parindent}{1cm}
+\usepackage[table]{xcolor}
+\usepackage{subcaption}
+
+%\usepackage[empty]{fullpage}
+%\definecolor{easy-eyes}{gray}{0.1}
+%\color{easy-eyes}
+\usepackage{graphicx}
+
+\setlength{\belowcaptionskip}{10pt plus 3pt minus 2pt}
+
+\usepackage{stackengine}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\newcommand{\arrow}{\tikz[thick, -{Triangle[scale=0.8]}]{\draw (0,2ex) -- (0,0) -- (2ex,0)}}
+\newcommand{\pai}[3]{\textbf{牌#2}
+\stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{#1/te#2.png}}}
+            {\hskip9pt\relax \arrow #3}
+\quad
+\stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{#1/te#2dora.png}}}{宝牌}}
+
+\def\stackalignment{l}
+%\usepackage{tabularx}
+
+
+% header and footer
+%
+
+
+
+% \newcommand{\ms}{\mathscr}
+% \newcommand{\mc}{\mathcal}
+% \newcommand{\mf}{\mathfrak}
+% \newcommand{\ov}{\overline}
+% \newcommand{\N}{\mathbb{N}}
+% \newcommand{\R}{\mathbb{R}}
+% \newcommand{\Z}{\mathbb{Z}}
+% \newcommand{\Q}{\mathbb{Q}}
+% \newcommand{\F}{\mathbb{F}}
+% \newcommand{\C}{\mathbb{C}}
+% \newcommand{\epi}{\varepsilon}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\part{做牌的诀窍}
+\input{part1/lecture1/lecture1.tex}
+\input{part1/lecture2/lecture2.tex}
+
+
+
+
+    
+
+    
+\end{document}
