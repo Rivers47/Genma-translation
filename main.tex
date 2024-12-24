@@ -2,8 +2,8 @@
 \title{现代麻将技术论}
 \author{ネマタ}
 %\usepackage[shceme=chinese]{ctex}
-%\setCJKmainfont{SarasaGothicSC-Regular.ttf}[BoldFont=SarasaGothicSC-Bold.ttf, ItalicFont=SarasaGothicSC-Italic.ttf] 
-%\setCJKfamilyfont{zhsong}{SarasaGothicSC-Regular.ttf}[BoldFont=SarasaGothicSC-Bold.ttf, ItalicFont=SarasaGothicSC-Italic.ttf] 
+\setCJKmainfont{SarasaGothicSC-Regular.ttf}[BoldFont=SarasaGothicSC-Bold.ttf, ItalicFont=SarasaGothicSC-Italic.ttf] 
+\setCJKfamilyfont{zhsong}{SarasaGothicSC-Regular.ttf}[BoldFont=SarasaGothicSC-Bold.ttf, ItalicFont=SarasaGothicSC-Italic.ttf] 
 \ctexset{chapter={
 name={第,讲},
 number=\arabic{chapter},
@@ -30,7 +30,7 @@ number=\arabic{chapter},
 %\setlength{\parindent}{1cm}
 
 \usepackage{subcaption}
-
+\captionsetup{justification=raggedright,singlelinecheck=false}
 %\usepackage[empty]{fullpage}
 %\definecolor{easy-eyes}{gray}{0.1}
 %\color{easy-eyes}
@@ -46,8 +46,12 @@ number=\arabic{chapter},
 \newcommand{\mahjongexplain}[2]{\stackengine{\Sstackgap}{#1}{\hskip9pt\relax \arrow #2}{U}{l}{\quietstack}{\useanchorwidth}{\stacktype}}
 \newcommand{\explainmahjong}[1]{\raisebox{-2pt}{\mahjong[3ex]{#1}}}
 \newcommand{\paiindex}[1]{\parbox{2em}{\linespread{1.0}\selectfont\centering\textbf{牌#1}}}
+
+\newcommand{\ted}[3]{
+    \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#3}
+}
 \newcommand{\te}[4]{
-    \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#4} \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#3}}}{宝牌}}
+    \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#4} \ifx#3\undefined\else \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#3}}}{宝牌}\fi}
 \newcommand{\tekiri}[5]{
     \paiindex{#1}\ \mahjongexplain{\raisebox{-10pt}{\mahjong[6ex]{#2}}}{#5}%
     \quad \stackunder{\raisebox{-10pt}{\mahjong[6ex]{#3}}}{宝牌}%
@@ -88,7 +92,7 @@ number=\arabic{chapter},
 \input{part1/lecture2/lecture2.tex}
 \input{part1/lecture3/lecture3.tex}
 \input{part1/lecture4/lecture4.tex}
-
+\input{lecture5.tex}
 
 
 
