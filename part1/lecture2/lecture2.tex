@@ -1,6 +1,6 @@
-\chapter[立直的判断]{立直的判断\footnote{如果没有特别说明具体的局面，则默认场况为东场的南家，且其他家没有明显的攻击性行为。听牌和一向听的手牌通常视为中盘，两向听的手牌视为序盘，而未到两向听的手牌视为最序盘。\\ 巡目的定义如下：最序盘是第1-3巡，序盘是第4-6巡，中盘是第7-9巡，稍过中盘是第10-12巡，末盘是第13-15巡，临近流局是第16巡及以后。}\footnote{关于立直判断，这里参考了模拟结果。如果在实战中，通过观察场况或其他家的打牌方式，可以明确判断立直或默听会对荣和率产生不同的影响，则应根据实际情况调整判断基准。
-      在模拟中，假设以下情况：两面搭子和无筋嵌张456时1人进攻；其他无筋嵌张时1.5人进攻；而选择默听时2.4人进攻。这里的“n人攻”指的是胡牌时自摸与荣和的比例接近1:n的状态。}}
+\chapter{立直的判断}
 \label{lecture2}
+
 \section{基本原则：听牌即立直}
 当门清状态下优先听牌时，绝大多数情况下选择立直是更有利的策略。这可以通过以下三点理由解释：
 \begin{enumerate}
@@ -30,20 +30,11 @@
 \begin{figure}[h]
     \caption{默听时有役并且打点足够高的手牌}
     \label{lec2:pai1-3}
-    \textbf{牌1}
-    \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{part1/lecture2/te1.png}}}{\hskip9pt\relax \arrow 默听}
-    \quad
-    \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{part1/lecture2/te1dora.png}}}{宝牌}
+    \te{1}{23457m234p23488s}{8s}{默听}
     \par\bigskip
-    \textbf{牌2}
-    \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{part1/lecture2/te2.png}}}{\hskip9pt\relax \arrow 序盘时立直稍有利}
-    \quad
-    \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{part1/lecture2/te2dora.png}}}{宝牌}
+    \te{2}{34567m22334405p}{5p}{序盘时立直稍有利}
     \par\bigskip
-    \textbf{牌3}
-    \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{part1/lecture2/te3.png}}}{\hskip9pt\relax \arrow 序盘时立直稍有利}
-    \quad
-    \stackunder{\raisebox{-10pt}{\includegraphics[height=6ex]{part1/lecture2/te3dora.png}}}{宝牌}
+    \te{3}{1199m112236677z}{5m}{序盘时立直稍有利}
 \end{figure}
 
 当默听5番时，选择立直或默听的策略需根据具体情况而定：
@@ -57,11 +48,11 @@
 \begin{figure}[h]
     \caption{默听5番的手牌}
     \label{lec2:pai4-6}
-    \pai{part1/lecture2}{4}{序盘立直末盘默听}
+    \te{4}{123456789m23p88s}{8s}{序盘立直末盘默听}
     \par\bigskip
-    \pai{part1/lecture2}{5}{略过中盘为止立直略有利}
+    \te{5}{12399m123p12999s}{4z}{略过中盘为止立直略有利}
     \par\bigskip
-    \pai{part1/lecture2}{6}{默听}
+    \te{6}{3577m345p345678s}{7m}{默听}
 \end{figure}
 
 
@@ -70,22 +61,22 @@
 \begin{figure}[h]
     \caption{默听4番的手牌}
     \label{lec2:pai7-9}
-    \pai{part1/lecture2}{7}{到中盘为止立直略为有利}
+    \te{7}{23467m234p23488s}{4z}{到中盘为止立直略为有利}
     \par\bigskip
-    \pai{part1/lecture2}{8}{略过中盘为止立直略为有利}
+    \te{8}{13789m11p345555z}{5z}{略过中盘为止立直略为有利}
     \par\bigskip
-    \pai{part1/lecture2}{9}{默听}
+    \te{9}{12346789m123p88s}{8s}{默听}
 \end{figure}
 
 如果默听已是满贯，而立直自摸也仅止于满贯的情况下，比如默听60符3番的手牌，通常选择默听更有利。而50符3番的情况，相较于默听4番，也更倾向于选择默听。\hyperref[lec2:pai10-12]{牌10-12}
 \begin{figure}[h]
     \caption{默听50符3番以上的手牌}
     \label{lec2:pai10-12}
-    \pai{part1/lecture2}{10}{默听}
+    \te{10}{3456m999p111s777z}{4z}{默听}
     \par\bigskip
-    \pai{part1/lecture2}{11}{序盘时立直略有利}
+    \te{11}{123m44p34888s777z}{4z}{序盘时立直略有利}
     \par\bigskip
-    \pai{part1/lecture2}{12}{序盘时立直略有利}
+    \te{12}{13789m111789p77z}{9p}{序盘时立直略有利}
 \end{figure}
 
 对于默听40符3翻的情况，相较于默听4翻，更倾向立直，但如果是无筋的456坎听，依然会选择默听。\hyperref[lec2:pai13-15]{牌13-15}
@@ -93,11 +84,11 @@
 \begin{figure}[h]
     \caption{默听40符3番的手牌}
     \label{lec2:pai13-15}
-    \pai{part1/lecture2}{13}{序盘立直末盘默听}
+    \te{13}{23467m222p23488s}{8s}{序盘立直末盘默听}
     \par\bigskip
-    \pai{part1/lecture2}{14}{最序盘立直末盘默听}
+    \te{14}{13789m111789p11s}{6p}{最序盘立直末盘默听}
     \par\bigskip
-    \pai{part1/lecture2}{15}{默听}
+    \te{15}{12346789m123p88s}{1p}{默听}
 \end{figure}
 
 此外，即使是在平场，如果剩余局数不多，尤其是在东风战或半庄战的南场，打点需求不高，或者作为Top且领先二位满贯以上时，如果立直仅稍微占优，选择默听也可能是合理的。
@@ -180,3 +171,12 @@
 另一方面，即使认为“默听也很难和牌”，在追求和牌的过程中，关键牌往往比无用牌少。常听到“不能让其他家为所欲为”的说法，但如果自身是先制的高得点听牌，不是反而希望对手可以“为所欲为”吗？
 
 需要反复强调的是，这一切最终都是“程度问题”。例如，一般来说，如果是七对子中张牌的单骑听牌，无论是默听还是立直，和牌率的差别不大，因此倾向于选择立直。而如果是幺九牌的单骑听牌，立直后和牌的可能性会显著降低，而默听时还有一定的和牌机会，因此倾向选择默听。至于“阻止其他家的手牌进展”，如果某家已经鸣牌且可能听牌，而自身的待牌即使默听也不容易打出，立直则可能迫使该家弃和，此时选择立直反而更容易达成和牌。
+
+\vspace*{\fill}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+
+{\footnotesize 
+如果没有特别说明具体的局面，则默认场况为东场的南家，且其他家没有明显的攻击性行为。听牌和一向听的手牌通常视为中盘，两向听的手牌视为序盘，而未到两向听的手牌视为最序盘。\\
+巡目的定义如下：最序盘是第1-3巡，序盘是第4-6巡，中盘是第7-9巡，稍过中盘是第10-12巡，末盘是第13-15巡，临近流局是第16巡及以后。
+
+关于立直判断，这里参考了模拟结果。如果在实战中，通过观察场况或其他家的打牌方式，可以明确判断立直或默听会对荣和率产生不同的影响，则应根据实际情况调整判断基准。在模拟中，假设以下情况：两面搭子和无筋嵌张456时1人进攻；其他无筋嵌张时1.5人进攻；而选择默听时2.4人进攻。这里的“$n$人攻”指的是胡牌时自摸与荣和的比例接近$1:n$的状态。}
