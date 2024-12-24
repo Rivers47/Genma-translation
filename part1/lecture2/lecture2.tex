@@ -1,5 +1,6 @@
 \chapter[立直的判断]{立直的判断\footnote{如果没有特别说明具体的局面，则默认场况为东场的南家，且其他家没有明显的攻击性行为。听牌和一向听的手牌通常视为中盘，两向听的手牌视为序盘，而未到两向听的手牌视为最序盘。\\ 巡目的定义如下：最序盘是第1-3巡，序盘是第4-6巡，中盘是第7-9巡，稍过中盘是第10-12巡，末盘是第13-15巡，临近流局是第16巡及以后。}\footnote{关于立直判断，这里参考了模拟结果。如果在实战中，通过观察场况或其他家的打牌方式，可以明确判断立直或默听会对荣和率产生不同的影响，则应根据实际情况调整判断基准。
-在模拟中，假设以下情况：两面搭子和无筋嵌张456时1人进攻；其他无筋嵌张时1.5人进攻；而选择默听时2.4人进攻。这里的“n人攻”指的是胡牌时自摸与荣和的比例接近1:n的状态。}}
+      在模拟中，假设以下情况：两面搭子和无筋嵌张456时1人进攻；其他无筋嵌张时1.5人进攻；而选择默听时2.4人进攻。这里的“n人攻”指的是胡牌时自摸与荣和的比例接近1:n的状态。}}
+\label{lecture2}
 \section{基本原则：听牌即立直}
 当门清状态下优先听牌时，绝大多数情况下选择立直是更有利的策略。这可以通过以下三点理由解释：
 \begin{enumerate}
@@ -109,44 +110,50 @@
 表A和表B是按照待牌类型统计的和牌率数据，基于所有选择立直的手牌，取6至10巡的数据。尽管这些数据比实际感知的要高，但在比较不同听牌时仍有参考价值。从这些数字来看，可以切实感受到边听的优势。
 \begin{table}[h]
     \caption{来自まほ公のミクシィ日記，東風荘超ラン6-10巡}
+    \label{lec2:table}
     \begin{subcaptionblock}{0.6\textwidth}
-        \rowcolors{2}{lightgray}{}{}
         \captionsetup{labelformat=empty}
         \caption{表A：余量3张以下的和牌率数据}
-        \begin{tabular}{c| c| c| c}
-            \rowcolor{black}
-            {\color{white}听牌}
-                  & \multicolumn{1}{!{\color{white}\vline}c}{\color{white}3枚和牌率}
-                  & \multicolumn{1}{!{\color{white}\vline}c}{\color{white}2枚和牌率}
-                  & \multicolumn{1}{!{\color{white}\vline}c}{\color{white}1枚和牌率}               \\
-            无筋19  & 50.1                                                         & 41.6 & 26.3 \\
-            无筋28  & 38.2                                                         & 31.7 & 19.2 \\
-            无筋37  & 32.0                                                         & 25.5 & 14.8 \\
-            无筋456 & 26.7                                                         & 20.3 & 11.8 \\
-            单筋456 & 30.9                                                         & 24.7 & 12.9 \\
-            筋19   & 67.9                                                         & 60.0 & 30.1 \\
-            筋28   & 51.2                                                         & 42.7 & 24.9 \\
-            筋37   & 43.5                                                         & 33.1 & 17.2 \\
-            筋456  & 45.4                                                         & 35.5 & 16.5 \\
-            \hline
-        \end{tabular}
+        \begin{tblr}{
+                colspec = {ccccc},
+                row{odd} = tableGray,
+                row{1} = {black,fg=white},
+                vline{2} = {1}{white,0.15em},
+                vline{2} = {2-10}{black,0.15em},
+                vline{3-4} = {1}{white,0.05em},
+                vline{3-4} = {2-10}{0.05em},
+            }
+            听牌    & 3枚和牌率 & 2枚和牌率 & 1枚和牌率 \\
+            无筋19  & 50.1  & 41.6  & 26.3  \\
+            无筋28  & 38.2  & 31.7  & 19.2  \\
+            无筋37  & 32.0  & 25.5  & 14.8  \\
+            无筋456 & 26.7  & 20.3  & 11.8  \\
+            单筋456 & 30.9  & 24.7  & 12.9  \\
+            筋19   & 67.9  & 60.0  & 30.1  \\
+            筋28   & 51.2  & 42.7  & 24.9  \\
+            筋37   & 43.5  & 33.1  & 17.2  \\
+            筋456  & 45.4  & 35.5  & 16.5  \\
+        \end{tblr}
     \end{subcaptionblock}
     \begin{subcaptionblock}{0.3\textwidth}
-        \rowcolors{2}{lightgray}{}{}
         \captionsetup{labelformat=empty}
         \caption{表B:余量4张的和牌率数据}
-        \begin{tabular}{c | c}
-            \rowcolor{black}
-            {\color{white}听牌}
-                  & \multicolumn{1}{!{\color{white}\vline}c}{\color{white}4枚和牌率} \\
-            无筋28  & 42.0                                                         \\
-            无筋37  & 36.8                                                         \\
-            无筋456 & 31.0                                                         \\
-            单筋456 & 35.4                                                         \\
-            筋28   & 56.5                                                         \\
-            筋37   & 48.9                                                         \\
-            筋456  & 50.0                                                         \\
-        \end{tabular}
+        \begin{tblr}{
+                colspec = {ccccc},
+                row{odd} = tableGray,
+                row{1} = {black,fg=white},
+                vline{2} = {1}{white,0.15em},
+                vline{3-5} = {1}{white,0.05em},
+            }
+            听牌    & 4枚和牌率 \\
+            无筋28  & 42.0  \\
+            无筋37  & 36.8  \\
+            无筋456 & 31.0  \\
+            单筋456 & 35.4  \\
+            筋28   & 56.5  \\
+            筋37   & 48.9  \\
+            筋456  & 50.0  \\
+        \end{tblr}
 
     \end{subcaptionblock}
 \end{table}
