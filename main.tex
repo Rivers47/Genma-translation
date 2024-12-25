@@ -24,6 +24,7 @@ number=\arabic{chapter},
 %\geometry{letterpaper, margin=1in}                   
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\setlength{\headheight}{13pt}
 
 \usepackage{xcolor}
 \definecolor{tableGray}{RGB}{210,210,210}
@@ -44,7 +45,7 @@ number=\arabic{chapter},
 
 \usepackage{stackengine}
 \newcommand{\mahjongexplain}[2]{\stackengine{\Sstackgap}{#1}{\hskip9pt\relax \arrow #2}{U}{l}{\quietstack}{\useanchorwidth}{\stacktype}}
-\newcommand{\explainmahjong}[1]{\raisebox{-2pt}{\mahjong[3ex]{#1}}}
+\newcommand{\inlinemahjong}[1]{\raisebox{-2pt}{\mahjong[3ex]{#1}}}
 \newcommand{\paiindex}[1]{\parbox{2em}{\linespread{1.0}\selectfont\centering\textbf{牌#1}}}
 
 \newcommand{\ted}[3]{
@@ -93,7 +94,7 @@ number=\arabic{chapter},
 \input{part1/lecture3/lecture3.tex}
 \input{part1/lecture4/lecture4.tex}
 \input{lecture5.tex}
-
+\input{lecture6.tex}
 
 
 
