@@ -16,7 +16,7 @@ def find_tags_in_file(filename):
     matches = pattern.findall(text)
 
     
-    lec_str = "lec6"
+    lec_str = "lec7"
     parsed_tags = []
     for tag in matches:
         print(tag)
@@ -39,7 +39,7 @@ def find_tags_in_file(filename):
 if __name__ == "__main__":
     # Replace 'input.txt' with the path to your file
     
-    filename = 'lecture6.tex' #sys.argv[1]
+    filename = 'lecture7.tex' #sys.argv[1]
     found_tags = find_tags_in_file(filename)
     pattern = re.compile("[^\{](牌(\d+)(?:-\d+)?)")
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     for match in matches:
         replaced, idx = match
         replacement = f'\\\\hyperref[{found_tags[int(idx)-1][1]}]{{{replaced}}}'
-        replaced_content = re.sub('[^{]'+replaced, replacement, replaced_content)
+        replaced_content = re.sub("[^\{]"+replaced, replacement, replaced_content, count=1)
 
     with open(f'{filename}.new', 'w', encoding='utf-8') as f_out:
         f_out.write(replaced_content)
