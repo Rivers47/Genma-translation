@@ -13,6 +13,9 @@ number=\arabic{chapter},
 
 \usepackage{tabularray}
 \UseTblrLibrary{booktabs, siunitx}
+\usepackage{xcolor}
+\definecolor{tableGray}{RGB}{210,210,210}
+%\setlength{\parindent}{1cm}
 
 \usepackage{hyperref}
 %\usepackage[nospace]{varioref}
@@ -26,9 +29,6 @@ number=\arabic{chapter},
 \pagestyle{fancy}
 \setlength{\headheight}{13pt}
 
-\usepackage{xcolor}
-\definecolor{tableGray}{RGB}{210,210,210}
-%\setlength{\parindent}{1cm}
 
 \usepackage{subcaption}
 \captionsetup{justification=raggedright,singlelinecheck=false}
@@ -42,6 +42,8 @@ number=\arabic{chapter},
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \newcommand{\arrow}{\tikz[thick, -{Triangle[scale=0.8]}]{\draw (0,2ex) -- (0,0) -- (2ex,0)}}
+
+\usepackage[most]{tcolorbox}
 
 \usepackage{stackengine}
 \newcommand{\mahjongexplain}[2]{\stackengine{\Sstackgap}{#1}{\hskip9pt\relax \arrow #2}{U}{l}{\quietstack}{\useanchorwidth}{\stacktype}}
